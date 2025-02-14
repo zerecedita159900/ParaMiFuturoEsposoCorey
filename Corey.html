@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de San Valentín</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fondo animado */
+        body {
+            background: url('fondo.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="miimagen.jpg" alt="Imagen de San Valentín" width="300" height="200">
+        
+        <!-- Botón de música centrado -->
+        <div style="text-align: center; margin: 10px 0;">
+            <button id="musicButton" style="background-color: #ff69b4; color: white; border: none; padding: 10px 15px; font-size: 16px; border-radius: 5px; cursor: pointer;">
+                🎵 Reproducir Música
+            </button>
+        </div>
+
+        <p>¿Quieres ser mi San Valentín? ❤️</p>
+        
+        <!-- Botón "Sí" -->
+        <div style="text-align: center;">
+            <a href="carta.pdf" download="Carta_San_Valentin.pdf">
+                <button id="yesButton" style="background-color: #ffcc00; color: black; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">
+                    ¡Sí! 🥰
+                </button>
+            </a>
+        </div>
+
+        <!-- Botón "No" agregado debajo -->
+        <div style="text-align: center; margin-top: 10px;">
+            <button id="noButton" style="background-color: #ff0000; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">
+                No 😡
+            </button>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" src="musica.mp3"></audio>
+
+    <script>
+        document.getElementById("musicButton").addEventListener("click", function() {
+            var music = document.getElementById("backgroundMusic");
+            if (music.paused) {
+                music.play();
+                this.textContent = "⏸️ Pausar Música";
+            } else {
+                music.pause();
+                this.textContent = "🎵 Reproducir Música";
+            }
+        });
+
+        document.getElementById("noButton").addEventListener("click", function() {
+            alert("Maldita puta, nunca te librarás de mí 😈");
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+     
+
+
+
